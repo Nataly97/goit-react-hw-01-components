@@ -11,7 +11,6 @@ const FriendList = ({ friends }) => {
             name={friend.name} 
             isOnline={friend.isOnline}
             key={friend.id}
-            id ={friend.id}
              />)}
         </ul>
     )
