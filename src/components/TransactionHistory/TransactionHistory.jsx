@@ -7,8 +7,10 @@ const Container = styled.table`
   height: auto;
   position: relative;
   left: 30%;
+  top: 100px;
   text-align: center;
-  margin: 15px;
+  margin: 0;
+  padding: 15px;
 `;
 
 const Titles = styled.th`
@@ -23,25 +25,12 @@ const Info = styled.td`
   color: #84878b;
 `;
 
-// const Container_Info = styled.tr`
-//   ${props => {
-//     console.log(props.children.length)
-//     switch (props.children.length) {
-//       case '3':
-//         return css`
-//         background-color: red;`;
-//       default:
-//         return `
-//         background-color: blue;`;
-//     }
-//   }}
-// `;
 const TransactionHistory = ({ items }) => {
   return (
     <Container className="transaction-history">
       <thead>
         <tr>
-          <Titles default>Type</Titles>
+          <Titles>Type</Titles>
           <Titles>Amount</Titles>
           <Titles>Currency</Titles>
         </tr>

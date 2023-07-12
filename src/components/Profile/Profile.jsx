@@ -8,8 +8,9 @@ const Container = styled.div`
   height: 400px;
   position: relative;
   left: 40%;
+  top: 15px;
   text-align: center;
-  border: 2px solid #707f8c;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 `;
 const Image = styled.img`
@@ -33,7 +34,7 @@ const ListItem = styled.li`
   width: 40px;
   padding: 30px;
   background-color: #f3f6f9;
-  border: 1px solid #707f8c;
+  border: 1px solid #e8ecf2;
 `;
 
 const Info = styled.p`
