@@ -17,7 +17,7 @@ const List = styled.ul`
   top: 20px;
 `;
 
-const List_Item = styled.li`
+const ListItem = styled.li`
   padding: 20px;
   color: #ffffff;
 `;
@@ -33,7 +33,7 @@ const Statistics = ({ title, stats }) => {
       {title && <Title className="title">{title}</Title>}
       <List className="stat-list">
         {stats.map(stat => (
-          <List_Item
+          <ListItem
             style={{ ...styled, backgroundColor: RandomHexColor() }}
             className="item"
             key={stat.id}
@@ -41,7 +41,7 @@ const Statistics = ({ title, stats }) => {
             <span className="label">{stat.label}</span>
             <br></br>
             <span className="percentage">{stat.percentage} %</span>
-          </List_Item>
+          </ListItem>
         ))}
       </List>
     </Container>
