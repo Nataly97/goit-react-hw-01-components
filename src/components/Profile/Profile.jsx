@@ -28,7 +28,7 @@ const List = styled.ul`
   top: 30px;
 `;
 
-const List_Item = styled.li`
+const ListItem = styled.li`
   height: 40px;
   width: 40px;
   padding: 30px;
@@ -41,12 +41,12 @@ const Info = styled.p`
   color: #b3bbc3;
 `;
 
-const Info_Title = styled.span`
+const InfoTitle = styled.span`
   font-size: 0.8em;
   color: #95a2af;
 `;
 
-const Info_Data = styled.span`
+const InfoData = styled.span`
   color: #3a4b5e;
   font-size: 1em;
 `;
@@ -70,27 +70,27 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       </div>
 
       <List className="stats">
-        <List_Item>
-          <Info_Title className="label">Followers</Info_Title>
+        <ListItem>
+          <InfoTitle className="label">Followers</InfoTitle>
           <br></br>
-          <Info_Data className="quantity">
+          <InfoData className="quantity">
             <strong>{stats.followers}</strong>
-          </Info_Data>
-        </List_Item>
-        <List_Item>
-          <Info_Title className="label">Views</Info_Title>
+          </InfoData>
+        </ListItem>
+        <ListItem>
+          <InfoTitle className="label">Views</InfoTitle>
           <br></br>
-          <Info_Data className="quantity">
+          <InfoData className="quantity">
             <strong>{stats.views}</strong>
-          </Info_Data>
-        </List_Item>
-        <List_Item>
-          <Info_Title className="label">Likes</Info_Title>
+          </InfoData>
+        </ListItem>
+        <ListItem>
+          <InfoTitle className="label">Likes</InfoTitle>
           <br></br>
-          <Info_Data className="quantity">
+          <InfoData className="quantity">
             <strong>{stats.likes}</strong>
-          </Info_Data>
-        </List_Item>
+          </InfoData>
+        </ListItem>
       </List>
     </Container>
   );
