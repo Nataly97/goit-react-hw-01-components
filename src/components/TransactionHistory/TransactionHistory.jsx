@@ -1,28 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './transactionHistory.css'
+import styled from 'styled-components';
 
+const Container = styled.table`
+  width: 600px;
+  height: auto;
+  position: relative;
+  left: 30%;
+  text-align: center;
+  margin: 15px;
+`;
+
+const Titles = styled.th`
+  background-color: #00bcd5;
+  padding: 15px;
+  color: #ffffff;
+`;
+
+const Info = styled.td`
+  background-color: #ecf1f3;
+  padding: 15px;
+  color: #84878b;
+`;
+
+// const Container_Info = styled.tr`
+//   ${props => {
+//     console.log(props.children.length)
+//     switch (props.children.length) {
+//       case '3':
+//         return css`
+//         background-color: red;`;
+//       default:
+//         return `
+//         background-color: blue;`;
+//     }
+//   }}
+// `;
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <Container className="transaction-history">
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <Titles default>Type</Titles>
+          <Titles>Amount</Titles>
+          <Titles>Currency</Titles>
         </tr>
       </thead>
 
       <tbody>
         {items.map(item => (
           <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <Info>{item.type}</Info>
+            <Info>{item.amount}</Info>
+            <Info>{item.currency}</Info>
           </tr>
         ))}
       </tbody>
-    </table>
+    </Container>
   );
 };
 
