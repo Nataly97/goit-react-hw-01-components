@@ -1,29 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const Container = styled.table`
-  width: 600px;
-  height: auto;
-  position: relative;
-  left: 30%;
-  top: 100px;
-  text-align: center;
-  margin: 0;
-  padding: 15px;
-`;
-
-const Titles = styled.th`
-  background-color: #00bcd5;
-  padding: 15px;
-  color: #ffffff;
-`;
-
-const Info = styled.td`
-  background-color: #ecf1f3;
-  padding: 15px;
-  color: #84878b;
-`;
+import { Container, Info, Titles } from './TransactionStyle';
 
 const TransactionHistory = ({ items }) => {
   return (

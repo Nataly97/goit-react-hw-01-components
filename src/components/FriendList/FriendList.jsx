@@ -1,16 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
-import styled from 'styled-components';
+import { Container } from './FriendStyle';
 
-const Container = styled.ul`
-  display: block;
-  width: 450px;
-  height: auto;
-  position: relative;
-  left: 33%;
-  top: 100px;
-`;
 const FriendList = ({ friends }) => {
   return (
     <Container className="friend-list">

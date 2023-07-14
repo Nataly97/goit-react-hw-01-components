@@ -1,31 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const Container = styled.section`
-  text-align: center;
-  position: relative;
-  top: 30px;
-`;
-
-const List = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 20px;
-`;
-
-const ListItem = styled.li`
-  padding: 20px;
-  color: #ffffff;
-`;
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  color: #5f676c;
-`;
+import {
+  Container,
+  Title,
+  List,
+  ListItem,
+  styled,
+  RandomHexColor,
+} from './StatisticsStyle';
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -53,9 +35,3 @@ Statistics.propTypes = {
   stats: PropTypes.array,
 };
 export default Statistics;
-
-function RandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
