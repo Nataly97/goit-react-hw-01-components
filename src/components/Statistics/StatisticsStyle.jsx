@@ -25,10 +25,10 @@ const Title = styled.h1`
   color: #5f676c;
 `;
 
-function RandomHexColor() {
+function randomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
 
-export { Container, Title, List, ListItem, styled, RandomHexColor };
+export { Container, Title, List, ListItem, randomHexColor };

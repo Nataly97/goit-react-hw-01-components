@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ColorStatus, Image, ListItem, Status, styled } from './FriendStyle';
+import { colorStatus, Image, ListItem, Status } from './FriendStyle';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <ListItem className="item">
       <Status
-        style={{ ...styled, backgroundColor: ColorStatus(isOnline) }}
+        style={{ backgroundColor: colorStatus(isOnline) }}
         className="status"
       >
         {isOnline}

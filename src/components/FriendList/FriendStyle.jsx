@@ -34,7 +34,7 @@ const Status = styled.span`
   border-radius: 50%;
 `;
 
-const ColorStatus = isOnline => {
+const colorStatus = isOnline => {
   let Color;
   if (isOnline === true) {
     Color = ' #fe524b'; //Rojo
@@ -44,4 +44,4 @@ const ColorStatus = isOnline => {
   return Color;
 };
 
-export { ColorStatus, Container, Image, ListItem, Status, styled };
+export { colorStatus, Container, Image, ListItem, Status };

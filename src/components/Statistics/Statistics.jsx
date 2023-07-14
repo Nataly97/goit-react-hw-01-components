@@ -5,8 +5,7 @@ import {
   Title,
   List,
   ListItem,
-  styled,
-  RandomHexColor,
+  randomHexColor,
 } from './StatisticsStyle';
 
 const Statistics = ({ title, stats }) => {
@@ -16,7 +15,7 @@ const Statistics = ({ title, stats }) => {
       <List className="stat-list">
         {stats.map(stat => (
           <ListItem
-            style={{ ...styled, backgroundColor: RandomHexColor() }}
+            style={{ backgroundColor: randomHexColor() }}
             className="item"
             key={stat.id}
           >
